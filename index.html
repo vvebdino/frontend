@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Столовая.РУ</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="top-wrapper">
+            <div class="overlay-header"></div>
+            <div class="big-container">
+                <nav class="header__nav">
+                    <ul class="header__nav__breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li class="header__nav__breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link" >
+                                <span itemprop="name">Компания</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <li class="header__nav__breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link" >
+                                <span itemprop="name">Портфолио</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                        <li class="header__nav__breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link" >
+                                <span itemprop="name">Проектирование</span>
+                            </a>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                    </ul>
+                    <ul class="header__nav__breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li class="header__nav__breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link header__nav__breadcrumbs__link_border" >
+                                <span itemprop="name">Ресторанам</span>
+                            </a>
+                            <meta itemprop="position" content="4" />
+                        </li>
+                        <li class="header__nav__breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link" >
+                                <span itemprop="name">Застройщикам</span>
+                            </a>
+                            <meta itemprop="position" content="5" />
+                        </li>
+                        <li class="header__nav__breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link" >
+                                <span itemprop="name">Гос.заказчикам</span>
+                            </a>
+                            <meta itemprop="position" content="6" />
+                        </li>
+                        <li class="header__nav__breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link" >
+                                <span itemprop="name">Таблет-питание</span>
+                            </a>
+                            <meta itemprop="position" content="7" />
+                        </li>
+                    </ul>
+                    <ul class="header__nav__breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li class="header__nav__breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link header__nav__breadcrumbs__link_border" >
+                                <span itemprop="name">Сервис</span>
+                            </a>
+                            <meta itemprop="position" content="8" />
+                        </li>
+                        <li class="header__nav__breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link" >
+                                <span itemprop="name">Контакты</span>
+                            </a>
+                            <meta itemprop="position" content="9" />
+                        </li>
+                        <li class="header__nav__breadcrumbs__item header__nav__breadcrumbs__item_email" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link" >
+                                <svg class="header-email">
+                                    <use xlink:href="img/icons.svg#header-email"></use>
+                                </svg>
+                                <span itemprop="name" id="headerEmail">info@stolovay.ru</span>
+                            </a>
+                            <meta itemprop="position" content="10" />
+                            <button class="header-email__button" type="button" onclick="headerEmail('#headerEmail')" id="email-btn">Скопировать</button>
+                        </li>
+                        <li class="header__nav__breadcrumbs__item header__nav__breadcrumbs__item_phone" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__nav__breadcrumbs__link" >
+                                <svg class="header-phone">
+                                    <use xlink:href="img/icons.svg#header-phone"></use>
+                                </svg>
+                                <span itemprop="name">8 495 790-72-05</span>
+                            </a>
+                            <meta itemprop="position" content="11" />
+                            <div class="modal-hover">
+                                <div class="modal-hover__left">
+                                    <div class="modal-hover__contacts">
+                                        <span class="modal-hover__contacts__number">8 495 790-72-05</span>
+                                        <span class="modal-hover__text">Мы принимаем звонки без выходных.</span>
+                                    </div>
+                                    <div class="modal-hover__check">
+                                        <span class="modal-hover__check__title">Выберите способ связи:</span>
+                                        <div class="modal-hover__check__way">
+                                            <img src="img/mobile.png" alt="social-icon: mobile">
+                                            <span class="modal-hover__check__span">Мобильный</span>
+                                        </div>
+                                        <div class="modal-hover__check__way">
+                                            <img src="img/viber.png" alt="social-icon: viber">
+                                            <span>Viber</span>
+                                        </div>
+                                        <div class="modal-hover__check__way">
+                                            <img src="img/telegram.png" alt="social-icon: telegram">
+                                            <span>Telegram</span>
+                                        </div>
+                                        <div class="modal-hover__check__way">
+                                            <img src="img/whatsapp.png" alt="social-icon: whatsapp">
+                                            <span>Whatsapp</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-hover__right">
+                                    <h4 class="modal-hover__title">Обратный звонок:</h4>
+                                    <span class="modal-hover__text">Мы перезвоним вам в течении часа</span>
+                                    <form action="#" method="post" class="modal-hover__form">
+                                        <span class="modal-hover__form__info">Имя:</span>
+                                        <input class="modal-hover__form__data" type="text" name="">
+                                        <span class="modal-hover__form__info">Телефон:</span>
+                                        <input class="modal-hover__form__data" type="tel" name="">
+                                        <button type="submit" class="btn modal-hover__form__btn">Отправить</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!--top-wrapper-->
+        <div class="header__search">
+            <div class="big-container">
+                <div class="header__search__logo">
+                    <a href="/"><img src="img/logo.png" alt="icon: logotype" class="header__search__logo__img"></a>
+                    <span class="header__search__logo__title">Столовая.<span class="toUppercase">ру<span><span>
+                </div>
+                <form action="#" method="get" class="header__search__form">
+                    <select name="main-search" class="header__search__form__select">
+                        <option value="Все">Все</option>
+                        <option value="Выберите категорию" disabled class="header__search__form__select">Выберите категорию:</option>
+                        <option value="Тепловое">Тепловое</option>
+                        <option value="Холодильное">Холодильное</option>
+                        <option value="Электромеханическое">Электромеханическое</option>
+                        <option value="Посудомоечное">Посудомоечное</option>
+                        <option value="Барное">Барное</option>
+                        <option value="Хлебопекарное">Хлебопекарное</option>
+                        <option value="Линии раздачи">Линии раздачи</option>
+                        <option value="Нейтральное">Нейтральное</option>
+                        <option value="Для фаст фуда">Для фаст фуда</option>
+                        <option value="Для залов">Для залов</option>
+                        <option value="Весовое">Весовое</option>
+                    </select>
+                    <input type="text" class="header__search__form__input">
+                    <button type="submit" class="btn header__search__form__button">
+                        <img src="img/magnifier.png" alt="icon: magnifier">
+                    </button>
+                </form>
+                <div class="header__search__provider">
+                    <img src="img/portal.png" alt="icon: portal of providers">
+                    <span class="header__search__provider__title">Мы на портале поставщиков</span>
+                </div>
+                <div class="header__search__cart">
+                    <div class="header__search__cart_wrap">
+                        <a href="#">
+                            <span class="header__search__cart__quantity">12</span>
+                            <svg class="header-cart">
+                                <use xlink:href="img/icons.svg#cart"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header__search__cart__count">
+                        <span class="header__search__cart__sum">Сумма</span>
+                        <span class="header__search__cart__number"><strong>150 000 руб.</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header__search-->
+        <div class="header_menu">
+            <div class="overlay-menu"></div>
+            <div class="big-container">
+                <ul class="header__menu__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/1.png" alt="Тепловое">
+                            <span itemprop="name">Тепловое</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/2.png" alt="Холодильное">
+                            <span itemprop="name">Холодильное</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li> 
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/3.png" alt="Электромеханическое">
+                            <span itemprop="name">Электромеханическое</span>
+                        </a>
+                        <meta itemprop="position" content="3" />
+                    </li>
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/4.png" alt="Посудомоечное">
+                            <span itemprop="name">Посудомоечное</span>
+                        </a>
+                        <meta itemprop="position" content="4" />
+                    </li>
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/5.png" alt="Хлебопекарное">
+                            <span itemprop="name">Хлебопекарное</span>
+                        </a>
+                        <meta itemprop="position" content="5" />
+                    </li>
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/6.png" alt="Линии раздачи">
+                            <span itemprop="name">Линии раздачи</span>
+                        </a>
+                        <meta itemprop="position" content="6" />
+                    </li>
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/7.png" alt="Нейтральное">
+                            <span itemprop="name">Нейтральное</span>
+                        </a>
+                        <meta itemprop="position" content="7" />
+                    </li>
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/8.png" alt="Для фаст фуда">
+                            <span itemprop="name">Для фаст фуда</span>
+                        </a>
+                        <meta itemprop="position" content="8" />
+                    </li>
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/9.png" alt="Для залов">
+                            <span itemprop="name">Для залов</span>
+                        </a>
+                        <meta itemprop="position" content="9" />
+                    </li>
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/10.png" alt="Вспомогательное">
+                            <span itemprop="name">Вспомогательное</span>
+                        </a>
+                        <meta itemprop="position" content="10" />
+                    </li>
+                    <li class="header__menu__list__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="header__menu__list__link">
+                            <img src="img/header-menu/11.png" alt="Для магазинов">
+                            <span itemprop="name">Для магазинов</span>
+                        </a>
+                        <meta itemprop="position" content="11" />
+                    </li>
+                </ul>
+            </div>
+                <div class="header__menu__dropdown header__menu__dropdown-warm">
+                    <ul class="header__menu__dropdown__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link active" >
+                                Пароконвектоматы
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Конвекционные печи
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li> 
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Плиты
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link" >
+                                Электросковороды
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="4" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Шкафы жарочные
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="5" />
+                        </li> 
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Котлы
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="6" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link" >
+                                Фритюрницы
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="7" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Жарочные поверхности
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="8" />
+                        </li> 
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Кипятильники
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="9" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Водонагреватели
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="10" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Столы тепловые
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="11" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Мармиты
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="12" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Тостеры 
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="13" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Шкафы тепловые
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="14" />
+                        </li>
+                    </ul>
+                    <div class="header__menu__dropdown__cat header__menu__dropdown__cat_combi-steamer">
+                        <div>
+                            <a href="#" class="header__menu__dropdown__cat__link">Бойлерные</a>
+                            <a href="#" class="header__menu__dropdown__cat__link">Инжекторные</a>
+                            <a href="#" class="header__menu__dropdown__cat__link">Все сразу</a>
+                        </div>
+                        <div class="header__menu__dropdown__cat__brands">
+                            <span class="header__menu__dropdown__cat__title header__menu__dropdown__cat_brand">Бренды</span>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item">Abat</a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item">Unox</a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item active" id="prommash-brand">Проммаш</a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item">Atesy</a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item">Rational</a>
+                        </div>        
+                        <div class="header__menu__dropdown__cat__countries">
+                            <span class="header__menu__dropdown__cat__title header__menu__dropdown__cat_country">Страны</span>
+                            <a href="#" class="header__menu__dropdown__cat__countries__item">
+                                <img src="img/dropdown-cat/flag-spain.png" alt="country: Spain">
+                                <span>Испания</span>
+                            </a>
+                            <a href="#" class="header__menu__dropdown__cat__countries__item">
+                                <img src="img/dropdown-cat/flag-switzerland.png" alt="country: Italy">
+                                <span>Италия</span>
+                            </a>
+                            <a href="#" class="header__menu__dropdown__cat__countries__item">
+                                <img src="img/dropdown-cat/flag-germany.png" alt="country: Germany">
+                                <span>Германия</span>
+                            </a>
+                            <a href="#" class="header__menu__dropdown__cat__countries__item">
+                                <img src="img/dropdown-cat/flag-turkey.png" alt="country: Turkey">
+                                <span>Турция</span>
+                            </a>
+                        </div>   
+                        <div class="header__menu__dropdown__good" id="prommash-good">
+                            <img src="img/dropdown-cat/good.png" alt="image: good" class="header__menu__dropdown__good__image">
+                            <span class="header__menu__dropdown__good__title">Пароконвектоматы</span>
+                            <a class="btn header__menu__dropdown__good__button">Все сразу</a>
+                        </div>     
+                    </div>
+                </div>
+                <!--dropdown-warm--> 
+                <div class="header__menu__dropdown header__menu__dropdown-cold">
+                    <ul class="header__menu__dropdown__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link active" >
+                                Холодильные шкафы
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Камеры холодильные
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li> 
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Моноблоки
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link" >
+                                Сплит-системы
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="4" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Столы холодильные
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="5" />
+                        </li> 
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Витрины холодильные
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="6" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link" >
+                                Горки холодильные
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="7" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Бонеты 
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="8" />
+                        </li> 
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Лари морозильные
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="9" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Льдогенераторы
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="10" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Шкафы шоковой заморозки
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="11" />
+                        </li>
+                        <li class="header__menu__dropdown__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="#" class="header__menu__dropdown__link">
+                                Кегераторы
+                                <span class="header__menu__dropdown__link_symbol">&#62;</span>
+                            </a>
+                            <meta itemprop="position" content="12" />
+                        </li>
+                    </ul>
+                    <div class="header__menu__dropdown__cat header__menu__dropdown__cat_refrigerated-cabinets">
+                        <div class="header__menu__dropdown__cat_refrigerated-cabinets__wrap">
+                            <div class="header__menu__dropdown__cat-wrap">
+                                <a href="#" class="header__menu__dropdown__cat__link">Среднетемпературные</a>
+                                <a href="#" class="header__menu__dropdown__cat__link">Низкотемпературные</a>
+                                <a href="#" class="header__menu__dropdown__cat__link">Универсальные</a>
+                                <a href="#" class="header__menu__dropdown__cat__link">Комбинированные</a>
+                                <a href="#" class="header__menu__dropdown__cat__link">Барные</a>
+                                <a href="#" class="header__menu__dropdown__cat__link">Все сразу</a>
+                            </div>
+                            <div class="header__menu__dropdown__cat__countries header__menu__dropdown__cat__countries_refrigerated-cabinets">
+                                <span class="header__menu__dropdown__cat__title header__menu__dropdown__cat_country">Страны</span>
+                                <a href="#" class="header__menu__dropdown__cat__countries__item">
+                                    <img src="img/dropdown-cat/flag-spain.png" alt="country: Spain">
+                                    <span>Испания</span>
+                                </a>
+                                <a href="#" class="header__menu__dropdown__cat__countries__item">
+                                    <img src="img/dropdown-cat/flag-switzerland.png" alt="country: Italy">
+                                    <span>Италия</span>
+                                </a>
+                                <a href="#" class="header__menu__dropdown__cat__countries__item">
+                                    <img src="img/dropdown-cat/flag-germany.png" alt="country: Germany">
+                                    <span>Германия</span>
+                                </a>
+                                <a href="#" class="header__menu__dropdown__cat__countries__item">
+                                    <img src="img/dropdown-cat/flag-turkey.png" alt="country: Turkey">
+                                    <span>Турция</span>
+                                </a>
+                            </div>  
+                        </div>
+                        <div class="header__menu__dropdown__cat__brands header__menu__dropdown__cat__brands_refrigerated-cabinets">
+                            <span class="header__menu__dropdown__cat__title header__menu__dropdown__cat_brand">Бренды</span>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item"><span class="toUppercase">electrolux</span></a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item">Gastrorag</a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item active" id="ariada-brand"><span class="toUppercase">ариада</span></a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item">Abat</a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item"><span class="toUppercase">mxm</span></a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item"><span class="toUppercase">полюс</span></a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item">Hicold</a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item"><span class="toUppercase">polair</span></a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item">Премьер</a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item">Бирюса</a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item">Россия</a>
+                            <a href="#" class="header__menu__dropdown__cat__brand__item"><span class="toUppercase">tffcold</span></a>
+                        </div>      
+                        <div class="header__menu__dropdown__good header__menu__dropdown__good_refrigerated-cabinets" id="ariada-good">
+                            <img src="img/dropdown-cat/good-2.png" alt="image: good" class="header__menu__dropdown__good__image">
+                            <span class="header__menu__dropdown__good__title">Холодильное оборудование</span>
+                            <a class="btn header__menu__dropdown__good__button header__menu__dropdown__good__button_refrigerated-cabinets">Все сразу</a>
+                        </div>     
+                    </div>
+                </div>
+                <!--dropdown-cold--> 
+        </div>
+        <!--header_menu-->           
+    </header>
+
+    <div class="overlay"></div> 
+    <!--overlay-->
+
+    <main class="main">
+            <div class="main-base big-container">
+                <div class="targeted-offers">
+                <span class="targeted-offers__title">Целевые предложения</span>
+                
+                <ul class="targeted-offers__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li class="targeted-offers__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="targeted-offers__link" >
+                            Кафе, барам, ресторанам
+                            <span class="targeted-offers__link_symbol">&#62;</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="targeted-offers__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="targeted-offers__link">
+                            Детcким садам и школам
+                            <span class="targeted-offers__link_symbol">&#62;</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li> 
+                    <li class="targeted-offers__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="targeted-offers__link">
+                            Таблет-питание
+                            <span class="targeted-offers__link_symbol">&#62;</span>
+                        </a>
+                        <meta itemprop="position" content="3" />
+                    </li>
+                    <li class="targeted-offers__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="targeted-offers__link" >
+                            Для столовых
+                            <span class="targeted-offers__link_symbol">&#62;</span>
+                        </a>
+                        <meta itemprop="position" content="4" />
+                    </li>
+                    <li class="targeted-offers__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="targeted-offers__link">
+                            Для пищеблоков
+                            <span class="targeted-offers__link_symbol">&#62;</span>
+                        </a>
+                        <meta itemprop="position" content="5" />
+                    </li> 
+                    <li class="targeted-offers__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="targeted-offers__link">
+                            Государственным заказчикам
+                            <span class="targeted-offers__link_symbol">&#62;</span>
+                        </a>
+                        <meta itemprop="position" content="6" />
+                    </li>
+                    <li class="targeted-offers__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="targeted-offers__link" >
+                            Для магазинов
+                            <span class="targeted-offers__link_symbol">&#62;</span>
+                        </a>
+                        <meta itemprop="position" content="7" />
+                    </li>
+                    <li class="targeted-offers__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="targeted-offers__link">
+                            Для войсковых частей
+                            <span class="targeted-offers__link_symbol">&#62;</span>
+                        </a>
+                        <meta itemprop="position" content="8" />
+                    </li> 
+                    <li class="targeted-offers__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="targeted-offers__link">
+                            Все предложения 
+                            <span class="targeted-offers__link_symbol">&#62;</span>
+                        </a>
+                        <meta itemprop="position" content="9" />
+                    </li>
+                </ul>
+
+            </div>
+            <div class="slider">
+                <div class="swiper-container swiper1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper1__slide">
+                                <span class="slide__portfolio">Портфолио</span>
+                                <span class="slide__title"><span class="toUppercase">нии</span> скорой помощи  им. <span class="toUppercase">н.в.</span> Склифосовского</span>
+                                <span class="slide__subtitle">Оборудование для пищеблоков</span>
+                                <button class="btn slide__button">Подробнее</button>
+                            </div>
+                            <div class="swiper-slide swiper1__slide">
+                                <span class="slide__portfolio">Портфолио</span>
+                                <span class="slide__title"><span class="toUppercase">нии</span> скорой помощи  им. <span class="toUppercase">н.в.</span> Склифосовского</span>
+                                <span class="slide__subtitle">Проектирование предприятий питания</span>
+                                <button class="btn slide__button">Подробнее</button>
+                            </div>
+                            <div class="swiper-slide swiper1__slide">
+                                <span class="slide__portfolio">Портфолио</span>
+                                <span class="slide__title"><span class="toUppercase">нии</span> скорой помощи  им. <span class="toUppercase">н.в.</span> Склифосовского</span>
+                                <span class="slide__subtitle">Проектирование и комплексное снабжение</span>
+                                <button class="btn slide__button">Подробнее</button>
+                            </div>
+                            <div class="swiper-slide swiper1__slide">
+                                <span class="slide__portfolio">Портфолио</span>
+                                <span class="slide__title"><span class="toUppercase">нии</span> скорой помощи  им. <span class="toUppercase">н.в.</span> Склифосовского</span>
+                                <span class="slide__subtitle">Оборудование для пищеблоков</span>
+                                <button class="btn slide__button">Подробнее</button>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <aside class="sale">
+                <div class="sale-wrap">
+                    <svg class="sale__icon">
+                        <use xlink:href="img/icons.svg#giftbox"></use>
+                    </svg>
+                    <span class="sale__subtitle">Самые низкие цены</span>
+                    <h1 class="sale__title">Распродажа</h1>
+                    <a href="#" class="sale__link">Каталог распродаж <span class="sale__link_arrow">&#62;</span></a>
+                </div>
+            </aside>
+            </div>
+            <div class="main-brands">
+                <div class="big-container">
+                    <div class="main-brands__item"><img src="img/brands/1.png" alt="icon-brand: Abat"></div>
+                    <div class="main-brands__item"><img src="img/brands/2.png" alt="icon-brand: Atesy"></div>
+                    <div class="main-brands__item"><img src="img/brands/3.png" alt="icon-brand: Hicold"></div>
+                    <div class="main-brands__item"><img src="img/brands/4.png" alt="icon-brand: Rational"></div>
+                    <div class="main-brands__item"><img src="img/brands/5.png" alt="icon-brand: Simeco"></div>
+                    <div class="main-brands__item"><a href="#" class="main-brands__item__link">Все бренды</a></div>
+                </div>
+            </div>
+            <div class="main-additionally big-container">
+                <div class="main__special-offers">
+                    <div class="main__special-offers__title">Специальные предложения<span class="main__special-offers__title_symbol">&#62;</span></div>
+                    <div class="main__special-offers__goods">
+                        <div class="main__special-offers__card">
+                            <img src="img/special-offers/card-good.png" alt="image: good" class="good-image">
+                            <img src="img/special-offers/card-country.png" alt="image: country(Russia)">
+                            <span class="main__special-offers__name">Пароконвектомат <span class="toUppercase">пкн</span>-6</span> 
+                            <span class="main__special-offers__price">160 000 руб.</span>
+                            <img src="img/special-offers/card-logo.png" alt="image: brand">
+                        </div>
+                        <div class="main__special-offers__card">
+                            <img src="img/special-offers/card-good.png" alt="image: good" class="good-image">
+                            <img src="img/special-offers/card-country.png" alt="image: country(Russia)">
+                            <span class="main__special-offers__name">Пароконвектомат <span class="toUppercase">пкн</span>-4</span> 
+                            <span class="main__special-offers__price">220 000 руб.</span>
+                            <img src="img/special-offers/card-logo.png" alt="image: brand">
+                        </div>
+                        <div class="main__special-offers__card">
+                            <img src="img/special-offers/card-good.png" alt="image: good" class="good-image">
+                            <img src="img/special-offers/card-country.png" alt="image: country(Russia)">
+                            <span class="main__special-offers__name">Пароконвектомат <span class="toUppercase">пкн</span>-8</span> 
+                            <span class="main__special-offers__price">180 000 руб.</span>
+                            <img src="img/special-offers/card-logo.png" alt="image: brand">
+                        </div>
+                    </div>
+                </div>
+                <div class="main__service">
+                    <!-- Slider main container -->
+                    <div class="swiper-container swiper2">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide swiper2-slide">
+                                <div class="swiper2__content">
+                                    <span class="swiper2__title">Сервис</span>
+                                    <span class="swiper2__subtitle">Гарантийный ремонт, монтажи и т.д.</span>
+                                    <a href="#" class="swiper2__more">Подробнее<span class="swiper2__more_symbol">&#62;</span></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper2-slide">
+                                <div class="swiper2__content">
+                                    <span class="swiper2__title">Сервис</span>
+                                    <span class="swiper2__subtitle">Гарантийный ремонт, монтажи и т.д.</span>
+                                    <a href="#" class="swiper2__more">Подробнее<span class="swiper2__more_symbol">&#62;</span></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper2-slide">
+                                <div class="swiper2__content">
+                                    <span class="swiper2__title">Сервис</span>
+                                    <span class="swiper2__subtitle">Гарантийный ремонт, монтажи и т.д.</span>
+                                    <a href="#" class="swiper2__more">Подробнее<span class="swiper2__more_symbol">&#62;</span></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper2-slide">
+                                <div class="swiper2__content">
+                                    <span class="swiper2__title">Сервис</span>
+                                    <span class="swiper2__subtitle">Гарантийный ремонт, монтажи и т.д.</span>
+                                    <a href="#" class="swiper2__more">Подробнее<span class="swiper2__more_symbol">&#62;</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination swiper2-pagination"></div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <div class="news container">
+            <span class="section-title news__title">Новости производителей</span>
+            <div class="news-wrap">
+                <div class="news__left">
+                    <div class="news__left__item">
+                        <img src="img/news/1.png" alt="image: Новый разборный ротационный пекарский шкаф" class="news__image">
+                        <div class="news__info">
+                            <span class="news__info__name">Abat</span>
+                            <span class="news__info__date">22.06.17</span>
+                        </div>
+                        <span class="news__left__title">Новый разборный ротационный пекарский шкаф <span class="toUppercase">рпш</span> 18-8-6<span class="toUppercase">mp</span></span>
+                        <p class="news__left__description">Новый разборный ротационный пекарский шкаф РПШ-18-8-6МР:  в комплекте тележка-шпилька ТШГ-18 на 18 уровней 600х800 мм вместимость тележки-шпильки - 135 хлебных форм №7 инжекционный тип парообразования разборная конструкция увеличенное стекло двери. Память на 110 программ (до 4-ех этапов в каждой программе) USB-порт. Таймер до 10 ч Регулировка влажности от 0 до 100%. 5 скоро</p>
+                    </div>
+                </div>
+                <div class="news__right">
+                    <div class="news__right__item">
+                        <img src="img/news/2.png" alt="image: Посудомоечная машина">
+                        <div class="news__right__content">
+                            <div class="news__info">
+                                <span class="news__info__name">Abat</span>
+                                <span class="news__info__date">22.06.17</span>
+                            </div>
+                            <span class="news__left__title">Повышение энергоэффективности туннельных посудомоечных машин <span class="toUppercase">мпт</span> торговой марки Abat</span>
+                            <p class="news__left__description">С целью снижения нагрузки на электрическую сеть и для повышения энергоэффективности изделий с 1 июня 2017 года был изменен алгоритм работы туннельных посудомоечных машин <span class="toUppercase">мпт</span> торговой марки Abat всех моделей... </p>
+                        </div>
+                    </div>
+                    <div class="news__right__item">
+                        <img src="img/news/3.png" alt="image: Посудомоечная машина">
+                        <div class="news__right__content">
+                            <div class="news__info news__info_other">
+                                <span class="news__info__name news__info_other">Abat</span>
+                                <span class="news__info__date news__info_other">25.06.17</span>
+                            </div>
+                            <span class="news__left__title">Повышение энергоэффективности туннельных посудомоечных машин торговой марки Abat</span>
+                            <p class="news__left__description">С целью снижения нагрузки на электрическую сеть и для повышения энергоэффективности изделий с 1 июня 2017 года был изменен алгоритм работы</p>
+                        </div>
+                    </div>
+                    <div class="news__right__item">
+                        <img src="img/news/2.png" alt="image: Посудомоечная машина">
+                        <div class="news__right__content">
+                            <div class="news__info">
+                                <span class="news__info__name">Abat</span>
+                                <span class="news__info__date">27.06.17</span>
+                            </div>
+                            <span class="news__left__title">Повышение энергоэффективности посудомоечных машин <span class="toUppercase">мпт</span> Abat</span>
+                            <p class="news__left__description">С целью снижения нагрузки на электрическую сеть и для повышения энергоэффективности изделий с 1 июня 2017 года был изменен алгоритм работы туннельных посудомоечных машин торговой марки Abat </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn news__btn__more">Все новости</a>
+    </div>
+
+    <div class="recommend">
+        <div class="container">
+            <span class="section-title recommend__title">Рекомендуем</span>
+            <p class="recommend__text">В этих разделах вы можете получить подробную информацию о пищевом оборудовании для столовых, ресторанов и кафе ведущих производителей.</p>
+            <div class="recommend__first-part">
+                <div class="recommend__Unox">
+                    <div class="recommend_Unox-wrap">
+                        <span class="recommend__Unox__name toUppercase">unox</span>
+                        <span class="recommend__Unox__title">Пароконвектоматы</span>
+                        <p class="recommend__Unox__description">Благодаря своей универсальности пароконвектоматы быстро завоевывыют пользователей по всему миру.</p>
+                    </div>
+                </div>
+                <div class="recommend__Hallde">
+                    <img src="img/recommend/2-Hallde.png" alt="image: Овощерезки HALLDE">
+                    <div>
+                        <span class="recommend__common__name toUppercase">hallde</span>
+                        <span class="recommend__common__title">Овощерезки</span>
+                        <p class="recommend__common__description">Мощный двигатель переводит высокий крутящий момент на режущий инструмент</p>
+                    </div>
+                </div>
+                <div class="recommend__Simeco">
+                    <img src="img/recommend/3-Simeco.png" alt="image: Нержавеющее SIMECO">
+                    <div>
+                        <span class="recommend__common__name toUppercase">simeco</span>
+                        <span class="recommend__common__title">Нержавеющее</span>
+                        <p class="recommend__common__description">Конструктивные особенности изделий отличаются высокой прочностью</p>
+                    </div>
+                </div>
+            </div>
+            <div class="recommend__second-part">
+                <div class="recommend__Rational">
+                    <div class="recommend_Rational-wrap">
+                        <span class="recommend__Rational__name toUppercase">rational</span>
+                        <span class="recommend__common__title">Пароконвектоматы</span>
+                        <p class="recommend__common__description">Педантичность и преданность своему делу делает продукцию Rational идеальной для тех, кто ищет надежность и долговечность.</p>
+                    </div>
+                </div>
+                <div class="recommend-wrapper">
+                    <div class="recommend__Abat">
+                        <div class="recommend_Abat-wrapper">
+                            <span class="recommend__Abat__name toUppercase">abat</span>
+                            <span class="recommend__Abat__title">Тепловое оборудование</span>
+                            <p class="recommend__Abat__description">Более 55 лет успешно работает на рынке торгово-технологического оборудования, по праву занимая лидирующее положение в данном сегменте.</p>
+                        </div>
+                    </div>
+                    <div class="recommend__Hicold">
+                        <div class="recommend_Hicold-wrap">
+                            <span class="recommend__Hicold__name toUppercase">hicold</span>
+                            <span class="recommend__common__title">Холодильные столы</span>
+                            <p class="recommend__common__description">Многофункциональность оборудования позволяет оптимизировать пространство на кухне, сделать работу персонала максимально удобной и эффективной.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offer container">
+        <div class="offer-parts">
+            <div class="offer-left">
+                <span class="offer__title">Комплексные решения оснащения столовых и кафе</span>
+                <p class="offer__text">Компания предлагает комплексное оснащение столовых, ресторанов, кафе и баров в Москве. Наши услуги построены по принципу полного цикла обслуживания предприятий общепита и бизнеса HoReCa.</p>
+                <p class="offer__text">Иными словами, мы предлагаем проектирование «под ключ» и постгарантийное обслуживание. География работы компании охватывает всю страну. При этом в каждом регионе мы готовы предложить демократичные цены на профессиональное технологическое оборудование для столовой и оптимальные решения с точки зрения эффективности бизнеса, приемлемым уровнем производительности в условиях ограниченного бюджета.</p>
+                <span class="offer__subtitle">Что мы предлагаем</span>
+                <ul class="offer__list">
+                    <li class="offer__item">разработку технологического проекта кухни и производственной линии, дизайна ресторанного интерьера;</li>
+                    <li class="offer__item">составление меню согласно концепции и оснащения бара (кафе, столовой);</li>
+                    <li class="offer__item">подбор посуды, текстиля под общий стиль; профессиональное оборудование для кафе, бара и ресторана, большой выбор современных моделей; доставку в любой регион РФ;</li>
+                    <li class="offer__item">монтажные и пуско-наладочные работы; автоматизацию производственного процесса, что позволяет определённое оборудование для бара;</li>
+                </ul>
+            </div>
+            <div class="offer-right">
+                <svg class="offer-icon">
+                    <use xlink:href="img/icons.svg#big-logo"></use>
+                </svg>
+                <span class="offer__logo">Столовая.<span class="toUppercase">ру</span></span>
+                <span class="offer__creation">создание оптимальных пищеблоков</span>
+                <span class="offer__group">Группа компаний</span>
+                <span class="offer__indicators">Показатели:</span>
+                <span class="offer__indicator">На рынке: 5 лет</span>
+                <span class="offer__indicator">Объем контрактов: 4 млрд.р.</span>
+                <span class="offer__indicator">Количество контрактов: 620</span>
+            </div>
+        </div>
+        <a class="btn offer__more">&#43;</a>
+    </div>
+
+    <div class="footer__contacts">
+        <div class="container">
+            <div class="footer__contacts__block">
+                <span class="footer__contacts__title">Информация</span>
+                <ul class="footer__contacts__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link" >
+                            <span itemprop="name">Компания</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Портфолио</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Проектирование</span>
+                        </a>
+                        <meta itemprop="position" content="3" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Ресторанам</span>
+                        </a>
+                        <meta itemprop="position" content="4" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Застройщикам</span>
+                        </a>
+                        <meta itemprop="position" content="5" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Гос.заказчикам</span>
+                        </a>
+                        <meta itemprop="position" content="6" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Таблет-питание</span>
+                        </a>
+                        <meta itemprop="position" content="7" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Сервис</span>
+                        </a>
+                        <meta itemprop="position" content="8" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Новости</span>
+                        </a>
+                        <meta itemprop="position" content="9" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Контакты</span>
+                        </a>
+                        <meta itemprop="position" content="10" />
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__contacts__block">
+                <span class="footer__contacts__title">Оборудование</span>
+                <ul class="footer__contacts__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link" >
+                            <span itemprop="name">Тепловое</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Холодильное</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Электромеханическое</span>
+                        </a>
+                        <meta itemprop="position" content="3" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Посудомоечное</span>
+                        </a>
+                        <meta itemprop="position" content="4" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Барное</span>
+                        </a>
+                        <meta itemprop="position" content="5" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Хлебопекарное</span>
+                        </a>
+                        <meta itemprop="position" content="6" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Линии раздачи</span>
+                        </a>
+                        <meta itemprop="position" content="7" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Нейтральное</span>
+                        </a>
+                        <meta itemprop="position" content="8" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Для фаст фуда</span>
+                        </a>
+                        <meta itemprop="position" content="9" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Для залов</span>
+                        </a>
+                        <meta itemprop="position" content="10" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Весовое</span>
+                        </a>
+                        <meta itemprop="position" content="11" />
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__contacts__block">
+                <span class="footer__contacts__title">Предложения</span>
+                <ul class="footer__contacts__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link" >
+                            <span itemprop="name">Кафе, барам, ресторанам</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Детским садам и школам</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Таблет-питание</span>
+                        </a>
+                        <meta itemprop="position" content="3" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link" >
+                            <span itemprop="name">Для кондитерских</span>
+                        </a>
+                        <meta itemprop="position" content="4" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Для пиццерий</span>
+                        </a>
+                        <meta itemprop="position" content="5" />
+                    </li> 
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Для магазинов</span>
+                        </a>
+                        <meta itemprop="position" content="6" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link" >
+                            <span itemprop="name">Для воинских частей</span>
+                        </a>
+                        <meta itemprop="position" content="7" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="footer__contacts__link">
+                            <span itemprop="name">Все предложения</span>
+                        </a>
+                        <meta itemprop="position" content="8" />
+                    </li> 
+                </ul>
+            </div>
+            <div class="footer__contacts__block">
+                <span class="footer__contacts__title">Контакты</span>
+                <ul class="footer__contacts__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li class="footer__contacts__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <span itemprop="name" class="footer__contacts__info">8 495 150-31-71</span>
+                            <span>8 800 500 43 44</span>
+                            <span class="footer__contacts__info">звонок бесплатный</span>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="footer__contacts__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <span itemprop="name">Пн-Пт</span> 
+                            <span class="footer__contacts__info">09:00 до 18:00</span>
+                        <meta itemprop="position" content="2" />
+                    </li> 
+                    <li class="footer__contacts__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <span itemprop="name">com@stolovay.ru</span> 
+                            <span class="footer__contacts__info">info@stolovay.ru</span>
+                        <meta itemprop="position" content="3" />
+                    </li>
+                    <li class="footer__contacts__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <span itemprop="name">111524,Москва,</span>
+                            <span itemprop="name" class="footer__contacts__info">Рязанский проспект 24к2</span>
+                        <meta itemprop="position" content="4" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__logo">
+                <img src="img/logo.png" alt="icon: footer-logo">
+                <div>
+                    <span class="footer__title">Столовая.<span class="toUppercase">ру</span></span>
+                    <span class="footer__subtitle">Создание оптимальных пищеблоков</span>
+                </div>
+            </div>
+            <div class="development">Сайт разработан NTI-systems</div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
