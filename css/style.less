@@ -531,7 +531,10 @@ a {
 .main-base {
     display: flex;
 }
-
+.targeted-offers, 
+.sale {
+    max-height: 47.6rem;
+}
 .targeted-offers {
     max-width: 25%;
     width: 30.3rem;
@@ -595,7 +598,7 @@ a {
 }
 
 .swiper1 {
-    width: 90.3rem;
+    max-width: 90.3rem;
     height: 100%;
 }
 
@@ -744,7 +747,7 @@ a {
 .main__special-offers {
     background-color: @white;
     margin-right: 2.1rem;
-    width: 1068px;
+    max-width: 1068px;
 }
 
 .main__special-offers__title {
@@ -766,7 +769,7 @@ a {
 .main__special-offers__card {
     border-top: 1px solid rgb(198, 198, 198);
     border-right: 1px solid #e8e8e8;
-    padding: 4rem 8.3rem 4rem 8.1rem;
+    padding: 4rem 9.3rem 4rem 9.1rem;
     text-align: center;
     width: 100%;
 
@@ -797,10 +800,13 @@ a {
     width: 14rem;
 }
 
+.main__service {
+    margin-left: auto;
+}
 
 .swiper2 {
     width: 45.8rem;
-    height: 43rem;
+    height: 44rem;
 }
 
 .swiper2-slide {
@@ -1638,22 +1644,784 @@ a {
 
 @media(max-width:767px) {}
 
-@media(max-width:991px) {}
-
-@media(max-width:1199px) {}
-
-@media(max-width:1400px) {
-    // header 
+@media(min-width:768px) and (max-width:991px) {
+     // header
+    .header .big-container {
+        padding: 0 1%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header__search .big-container {
+        padding-right: 0;
+        justify-content: space-between;
+    }
+    .top-wrapper .big-container {
+        padding-right: 0;
+    }
+    .header__search__cart {
+        padding: 2.3rem 0.5rem;
+    }
     .header__search__form {
+        width: 49%;
+        margin-left: 2rem;
+        margin-right: 0;
+        padding-top: 0;
+    }
+    .header__search__form__input {
+        height: 3rem;
+    }
+    .header__search__form__button {
+        width: 3.5rem;
+        height: 3rem;
+    }
+    .header__nav__breadcrumbs__list:first-child {
+        padding: 0;
+        width: 26%;
+    }
+    .header__nav__breadcrumbs__item_email {
+        padding: 1.5rem 0rem;
+    }
+    .header__nav__breadcrumbs__list {
+        padding-left: 1rem;
+        width: 37%;
+    }
+    .header__nav__breadcrumbs__item_phone {
+        padding: 1.4rem 5px;
+    }
+    .header__nav__breadcrumbs__link {
+        font-size: 1rem;
+    }
+    .header__menu__list {
+        align-items: flex-end;
+    }
+    .header__menu__list__link {
+        font-size: 1rem;
+    }
+    .header__nav__breadcrumbs__list:last-child::before,
+    .header__nav__breadcrumbs__list:first-child::after {
+        height: 2rem;
+    }
+    .header-email,
+    .header-phone {
+        vertical-align: middle;
+        width: 1.5rem;
+    }
+    .header__search__logo__title {
+        margin-left: 0rem;
+        font-size: 2rem;
+    }
+    .header__menu__list__link img {
+        width: 4.5rem;
+    }
+    .header__search__logo {
+        display: block;
+        padding: 5px 0;
+    }
+    .header__search__logo__img {
+        display: block;
+        margin: 0 auto;
+    }
+    .ui-selectmenu-button.ui-button {
+        padding: 1px;
+        padding-top: 8px;
+        padding-right: 5px;
+        height: 3rem;
+    }
+    .header__search__provider {
+        padding: 5px 0;
+        display: block;
+        margin-right: 0;
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .header__search__provider__title {
+        margin-left: 0;
+        display: block;
+        text-align: center;
+    }
+    .header__search__cart__count {
+        margin-left: 5px;
+    }
+    .header__search__cart__number {
+        font-size: 1.4rem;
+    }
+    // main
+    .main {
+        margin-top: 21.5rem;
+        padding-bottom: 0;
+    }
+    .slider {
         width: 50%;
+        height: 40rem;
+    }
+    .sale {
+        padding-top: 12rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 1rem;
+        height: 40rem;
+    }
+    .sale__title {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+    .sale__link {
+        font-size: 1.7rem;
+    }
+    .targeted-offers {
+        padding-top: 5px;
+        margin-right: 1rem;
+        height: 40rem;
+    }
+    .slide__title {
+        font-size: 2.4rem;
+        max-width: 20rem;
+    }
+    .slide__subtitle {
+        display: block;
+        width: 35%;
+        font-size: 1.5rem;
+    }
+    .slide__button {
+        margin-top: 3rem;
+        padding: .5rem 1.5rem .8rem;
+        font-size: 1.6rem;
+        max-width: 11rem;
+    }
+    .swiper1__slide {
+        padding-left: 1rem;
+        padding-top: 3rem;
+        background-position: 100% 50%;
+    }
+    .targeted-offers__title {
+        display: block;
+        text-align: center;
+        padding: 0 6px;
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    .targeted-offers__link {
+        padding: 0 1rem;
+        padding-right: 5px;
+        font-size: 1.4rem;
+    }
+    .targeted-offers__link_symbol {
+        display: none;
+    }
+    .targeted-offers__item {
+        padding: 7px 0;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .main-brands {
+        margin: 1.5rem 0;
+    }
+    .main-brands__item {
+        padding: 1rem;
+
+        img {
+            width: 10rem;
+        }
+    }
+    .main-brands .big-container {
+        padding: 0;
+    }
+    .main__special-offers {
+        width: 60%;
+        margin-right: 1.5rem;
+    }
+    .main__special-offers__card {
+        padding: 4rem 3.5rem;
+        &:last-child {
+            display: none;
+        }
+    }
+    .swiper2 {
+        width: 30rem;
+    }
+    .swiper2__content {
+        margin-left: 2rem;
+    }
+    // новости
+    .news {
+        padding: 0rem 1%;
+        padding-top: 8rem;
+    }
+    .news-wrap {
+        display: block;
+    }
+    .news__left {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+    .news__right {
+        max-width: 100%;
+    }
+    // рекомендуем
+    .recommend {
+        padding-bottom: 0;
+    }
+    .recommend_Unox-wrap {
+        margin-left: 14rem;
+    }
+    .recommend__Unox__title {
+        font-size: 2.5rem;
+    }
+    .recommend__Unox__description, 
+    .recommend__Abat__description,
+    .recommend__common__description {
+        font-size: 1.4rem;
+    }
+    .recommend__Abat {
+        background-position: -250% 50%;
+        background-size: 90%;
+    }
+    .recommend_Abat-wrapper {
+        width: 27rem;
+        margin-left: 16rem;
+    }
+    .recommend__Abat__title {
+        font-size: 2.5rem;
+    }
+    .recommend_Hicold-wrap {
+        width: 24rem;
+        margin-left: 2.5rem;
+    }
+    .recommend__Hicold {
+        background-position: 65% 100%;
+    }
+    .recommend__common__title {
+        font-size: 2rem;
+    }
+    .recommend__Unox {
+        background-size: 60%;
+        background-position: -74% 50%;
+    }
+    .recommend__Hallde {
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+        img {
+            height: 20rem;
+        }
+    }
+    .recommend__Simeco {
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+        img {
+            height: 20rem;
+        }
+    }
+    .recommend__Rational {
+        background-position: 35% 100%;
+    }
+    .recommend_Rational-wrap {
+        margin-top: 8.5rem;
+    }
+    // предложение 
+    .offer {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .offer-right {
+        margin-top: 1rem;
+        margin-left: 8rem;
+    }
+    .offer__title {
+        max-width: 100%;
+        font-size: 2.7rem;
+    }
+    .offer__text,
+    .offer__list {
+        font-size: 1.5rem;
+    }
+    .offer__subtitle {
+        font-size: 3rem;
+        margin: 2.5rem 0;
+    }
+    .offer-icon {
+        width: 11rem;
+        height: 12.5rem;
+        margin-bottom: 0rem;
+    }
+    .offer__logo {
+        font-size: 3rem;
+    }
+    .offer__creation {
+        margin-bottom: 2rem;
+    }
+    .offer__group {
+        font-size: 2.1rem;
+    }
+    .offer__indicators {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+    .offer__indicator {
+        font-size: 12.6px;
+    }
+    // подвал
+    .footer__contacts {
+        margin-top: 10rem;
+        padding-bottom: 4rem;
+        .container {
+            padding: 0 1%;
+        }
+    }
+    .footer__contacts__block {
+        margin-top: 6rem;
+    }
+    .footer__contacts__title {
+        padding-bottom: 1rem;
+        font-size: 1.7rem;
+    }
+    .footer__contacts__link,
+    .footer__contacts__item {
+        font-size: 1.3rem;
+    }
+    .footer {
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+        .container {
+            padding: 0 1%;
+        }
+    }
+    .development {
+        font-size: 1.5rem;
+    }
+    .footer__title {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    .footer__subtitle {
+        margin-left: 1rem;
+        font-size: 1.4rem;
+    }
+    // модалки 
+    .overlay-header {
+        max-height: 16.1rem;
+        top: 4.8rem;
+    }
+    .modal-hover {
+        top: 4.8rem;
+    }
+    .modal-hover {
+        width: 45rem;
+        height: 24rem;
+        padding: 2rem;
+        padding-bottom: 0;
+    }
+    .modal-hover__contacts__number {
+        font-size: 1.5rem;
+    }
+    .modal-hover__text {
+        font-size: 1.1rem;
+    }
+    .modal-hover__title {
+        font-size: 1.5rem;
+    }
+    .modal-hover__check__way {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+    .modal-hover__form__info {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+    .modal-hover__check__title {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .modal-hover__form__btn {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        max-width: 10rem;
+    }
+    .modal-hover__form__data {
+        padding-left: 5px;
+        padding-bottom: 5px;
+        font-size: 1.3rem;
+        margin-top: 5px;
+    }
+    .header-email__button {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        right: -1.5rem;
+    }
+    .ui-state-disabled,
+    .ui-widget-content .ui-state-disabled,
+    .ui-widget-header .ui-state-disabled {
+        padding: 1.3rem 0;
+    }
+    .ui-menu .ui-menu-item {
+        font-size: 1.3rem;
+    }
+    .ui-widget.ui-widget-content {
+        width: 18rem;
+        padding-bottom: 2.3rem;
+    }
+    .ui-menu .ui-menu-item-wrapper {
+        position: relative;
+        padding: 2.5px;
     }
 }
 
-@media(max-width:1600px) {
+@media(min-width:992px) and (max-width:1200px) {
+    // header
+    .header .big-container {
+        padding: 0 1%;
+        justify-content: space-around;
+    }
+    .header__search .big-container {
+        padding-right: 0;
+        justify-content: space-between;
+    }
+    .top-wrapper .big-container {
+        padding-right: 0;
+    }
+    .header__search__cart {
+        padding-left: 1rem;
+    }
+    .header__search__form {
+        width: 49%;
+        margin: 0 2.5rem;
+    }
+    .header__nav__breadcrumbs__list:first-child {
+        padding: 0;
+        width: 26%;
+    }
+    .header__nav__breadcrumbs__item_email {
+        padding: 1.5rem 0rem;
+    }
+    .header__nav__breadcrumbs__list {
+        padding-left: 1rem;
+        width: 37%;
+    }
+    .header__nav__breadcrumbs__item_phone {
+        padding: 1.4rem 5px;
+    }
+    .header__nav__breadcrumbs__link {
+        font-size: 1.3rem;
+    }
+    .header__menu__list__link {
+        font-size: 1.2rem;
+    }
+    .header__nav__breadcrumbs__list:last-child::before,
+    .header__nav__breadcrumbs__list:first-child::after {
+        height: 2rem;
+    }
+    .header-email,
+    .header-phone {
+        vertical-align: middle;
+    }
+    .header__search__logo__title {
+        margin-left: 0.5rem;
+        font-size: 2.5rem;
+    }
+    .header__menu__list__link img {
+        width: 4.5rem;
+    }
+    // main
+    .main {
+        margin-top: 21.5rem;
+    }
+    .slider {
+        width: 50%;
+    }
+    .sale {
+        padding-top: 20rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 1rem;
+    }
+    .targeted-offers {
+        margin-right: 1rem;
+    }
+    .slide__title {
+        font-size: 2.8rem;
+        max-width: 25rem;
+    }
+    .slide__subtitle {
+        display: block;
+        width: 43%;
+    }
+    .swiper1__slide {
+        padding-left: 2.5rem;
+    }
+    .targeted-offers__title {
+        padding: 0 6px;
+        font-size: 2.2rem;
+    }
+    .targeted-offers__link {
+        padding: 0 1rem;
+    }
+    .targeted-offers__item {
+        padding-bottom: 13.5px;
+    }
+    .main-brands__item {
+        padding: 1rem 1.5rem;
+    }
+    .main__special-offers {
+        width: 65%;
+        margin-right: 1.5rem;
+    }
+    .main__special-offers__card {
+        padding: 3.9rem 3.5rem;
+    }
+    .swiper2 {
+        width: 35rem;
+    }
+    .swiper2__content {
+        margin-left: 3rem;
+    }
+    // новости
+    .news {
+        padding: 0rem 1%;
+    }
+    .news-wrap {
+        display: block;
+    }
+    .news__left {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+    .news__right {
+        max-width: 100%;
+    }
+    // рекомендуем
+    .recommend__Unox {
+        background-size: 70%;
+        background-position: -115% 0%;
+    }
+    .recommend_Unox-wrap {
+        margin-left: 21rem;
+    }
+    .recommend__Abat {
+        background-position: -150% 50%;
+        background-size: 85%;
+    }
+    .recommend_Abat-wrapper {
+        margin-left: 20rem;
+    }
+    .recommend_Hicold-wrap {
+        width: 30rem;
+        margin-left: 4rem;
+    }
+    .recommend__Hicold {
+        background-position: 80% 100%;
+    }
+    .recommend__common__title {
+        font-size: 2.5rem;
+    }
+    // предложение 
+    .offer {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .offer__indicator {
+    font-size: 1.7rem;
+    }
+    // подвал
+    .footer__contacts .container,
+    .footer .container {
+        padding: 0 1%;
+    }
+    // модалки 
+    .overlay-header {
+        max-height: 15.3rem;
+        top: 4.8rem;
+    }
+    .modal-hover {
+        top: 4.8rem;
+    }
+    .modal-hover {
+        width: 70rem;
+        height: 29rem;
+        padding: 3rem;
+        padding-bottom: 0;
+    }
+    .modal-hover__contacts__number {
+        font-size: 2rem;
+    }
+    .modal-hover__text {
+        font-size: 1.4rem;
+    }
+    .modal-hover__title {
+        font-size: 1.9rem;
+    }
+    .modal-hover__check__way {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+    .modal-hover__form__info {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+    .modal-hover__check__title {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1.4rem;
+    }
+    .modal-hover__form__btn {
+        font-size: 1.5rem;
+        margin-top: 2.1rem;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+    }
+    .header-email__button {
+        font-size: 1.3rem;
+        padding: 1rem 3rem;
+        right: -1.5rem;
+    }
+    .ui-state-disabled,
+    .ui-widget-content .ui-state-disabled,
+    .ui-widget-header .ui-state-disabled {
+        padding-bottom: 1.7rem;
+    }
+    .ui-menu .ui-menu-item {
+        font-size: 1.4rem;
+    }
+    .ui-widget.ui-widget-content {
+        width: 18.5rem;
+        padding-bottom: 2.3rem;
+    }
+}
+
+@media (min-width:1201px) and (max-width:1400px) {
+    // header
+    .header .big-container {
+        padding: 0 1%;
+        justify-content: space-around;
+    }
+    .header__search .big-container {
+        padding-right: 0;
+        justify-content: space-between;
+    }
+    .top-wrapper .big-container {
+        padding-right: 0;
+    }
+
+    .header__search__cart {
+        padding-left: 0;
+    }
+    .header__search__form {
+        width: 49%;
+        margin-left: 2.5rem;
+    }
+    .header__nav__breadcrumbs__list:first-child {
+        padding: 0;
+        width: 25%;
+    }
+    .header__nav__breadcrumbs__item_email {
+        padding: 1.5rem 0.5rem;
+    }
+    .header__nav__breadcrumbs__list {
+        padding-left: 1.5rem;
+        width: 37%;
+    }
+    .header__nav__breadcrumbs__item_phone {
+        padding: 1.4rem 0.5rem;
+    }
+    .header__nav__breadcrumbs__link {
+        font-size: 1.5rem;
+    }
+    .header__menu__list__link {
+        font-size: 1.4rem;
+    }
+    // main
+    .slider {
+        width: 55%;
+    }
+    .sale {
+        padding-left: 1.5rem;
+    }
+    .slide__title {
+        font-size: 2.8rem;
+    }
+    .targeted-offers__title {
+        padding: 0 3px;
+    }
+    .targeted-offers__item {
+        padding-bottom: 1.3rem;
+    }
+    .main-brands__item {
+        padding: 1rem 2rem;
+    }
+    .main__special-offers {
+        width: 65%;
+    }
+    .main__special-offers__card {
+        padding: 3.9rem 4.5rem;
+    }
+    // новости
+    .news {
+        padding: 8.6rem 1%;
+    }
+    // рекомендуем
+    .recommend {
+        padding-top: 0;
+    }
+    .recommend__Unox {
+        background-size: 80%;
+    }
+    .recommend__Abat {
+        background-position: -230% 50%;
+        background-size: 90%;
+    }
+     // предложение 
+    .offer {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    // подвал
+    .footer__contacts .container,
+    .footer .container {
+        padding: 0 1%;
+    }
+    // модалки 
+    .overlay-header {
+        max-height: 16.7rem;
+        top: 4.8rem;
+    }
+    .modal-hover {
+        top: 4.8rem;
+    }
+    .header-email__button {
+        font-size: 1.4rem;
+    }
+    .header__menu__dropdown {
+        top: 10rem;
+        height: 41rem;
+    }
+    .header__menu__dropdown__list {
+        padding-top: 0;
+        overflow-y: scroll;
+    }
+}
+
+@media(min-width:1401px) and (max-width:1600px) {
     // header 
     .header .big-container {
         padding: 0 1.5%;
         justify-content: space-around;
+    }
+    .header__search .big-container {
+        padding-right: 0;
+        justify-content: space-between;
+    }
+    .top-wrapper .big-container {
+        padding-right: 0;
     }
     .header__search__form {
         width: 55%;
@@ -1664,5 +2432,26 @@ a {
     }
     .header__nav__breadcrumbs__list {
         padding-left: 2.5rem;
+    }
+    // main
+    .slider {
+        width: 55%;
+    }
+    // новости
+    .news {
+        padding: 8.6rem 1%;
+    }
+    // предложение 
+    .offer {
+        padding-left: 1%;
+    }
+    // подвал
+    .footer__contacts .container,
+    .footer .container {
+        padding: 0 1%;
+    }
+    // модалки
+    .overlay-header {
+        max-height: 17rem;
     }
 }
