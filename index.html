@@ -140,9 +140,18 @@
         <!--top-wrapper-->
         <div class="header__search">
             <div class="big-container">
+                <div class="burger-menu">
+                    меню
+                    <span class="burger-menu__item"></span>
+                    <span class="burger-menu__item"></span>
+                    <span class="burger-menu__item"></span>
+                </div>
                 <a class="header__search__logo">
                     <img src="img/logo.png" alt="icon: logotype" class="header__search__logo__img">
-                    <span class="header__search__logo__title">Столовая.<span class="toUppercase">ру<span><span>
+                    <div>
+                        <span class="header__search__logo__title">Столовая.<span class="toUppercase">ру</span></span>
+                        <span class="header__search__logo_hide">Создание пищеблоков</span>
+                    </div>
                 </a>
                 <form action="#" method="get" class="header__search__form">
                     <select name="main-search" class="header__search__form__select">
@@ -169,18 +178,28 @@
                     <img src="img/portal.png" alt="icon: portal of providers">
                     <span class="header__search__provider__title">Мы на портале поставщиков</span>
                 </div>
-                <div class="header__search__cart">
-                    <div class="header__search__cart_wrap">
-                        <a href="#">
-                            <span class="header__search__cart__quantity">12</span>
-                            <svg class="header-cart">
-                                <use xlink:href="img/icons.svg#cart"></use>
-                            </svg>
-                        </a>
+                <div class="header-mobile_wrap">
+                    <div class="mobile-icons">
+                        <button class="mobile-icons__button">
+                            <img src="img/mobile/search.png" alt="button: search">
+                        </button>
+                        <button class="mobile-icons__button">
+                            <img src="img/mobile/phone.png" alt="button: call">
+                        </button>
                     </div>
-                    <div class="header__search__cart__count">
-                        <span class="header__search__cart__sum">Сумма</span>
-                        <span class="header__search__cart__number"><strong>150 000 руб.</strong></span>
+                    <div class="header__search__cart">
+                        <div class="header__search__cart_wrap">
+                            <a href="#">
+                                <span class="header__search__cart__quantity">12</span>
+                                <svg class="header-cart">
+                                    <use xlink:href="img/icons.svg#cart"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="header__search__cart__count">
+                            <span class="header__search__cart__sum">Сумма</span>
+                            <span class="header__search__cart__number"><strong>150 000 руб.</strong></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -544,7 +563,7 @@
                             <a href="#" class="header__menu__dropdown__cat__brand__item"><span class="toUppercase">tffcold</span></a>
                         </div>      
                         <div class="header__menu__dropdown__good header__menu__dropdown__good_refrigerated-cabinets" id="ariada-good">
-                            <img src="img/dropdown-cat/good-2.png" alt="image: good" class="header__menu__dropdown__good__image">
+                            <img src="img/dropdown-cat/good-2.png" alt="image: good" class="header__menu__dropdown__good__image header__menu__dropdown__good__image-cold">
                             <span class="header__menu__dropdown__good__title">Холодильное оборудование</span>
                             <a class="btn header__menu__dropdown__good__button header__menu__dropdown__good__button_refrigerated-cabinets">Все сразу</a>
                         </div>     
@@ -616,6 +635,13 @@
                     <li class="targeted-offers__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                         <a itemprop="item" href="#" class="targeted-offers__link">
                             Для войсковых частей
+                            <span class="targeted-offers__link_symbol">&#62;</span>
+                        </a>
+                        <meta itemprop="position" content="8" />
+                    </li> 
+                    <li class="targeted-offers__item targeted-offers__item_hide" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="#" class="targeted-offers__link">
+                            Оборудование
                             <span class="targeted-offers__link_symbol">&#62;</span>
                         </a>
                         <meta itemprop="position" content="8" />
@@ -900,6 +926,7 @@
         <div class="container">
             <div class="footer__contacts__block">
                 <span class="footer__contacts__title">Информация</span>
+                <button type="button" class="footer__more">+</button>
                 <ul class="footer__contacts__list" itemscope itemtype="http://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                         <a itemprop="item" href="#" class="footer__contacts__link" >
@@ -965,6 +992,7 @@
             </div>
             <div class="footer__contacts__block">
                 <span class="footer__contacts__title">Оборудование</span>
+                <button type="button" class="footer__more">+</button>
                 <ul class="footer__contacts__list" itemscope itemtype="http://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                         <a itemprop="item" href="#" class="footer__contacts__link" >
@@ -1036,6 +1064,7 @@
             </div>
             <div class="footer__contacts__block">
                 <span class="footer__contacts__title">Предложения</span>
+                <button type="button" class="footer__more">+</button>
                 <ul class="footer__contacts__list" itemscope itemtype="http://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                         <a itemprop="item" href="#" class="footer__contacts__link" >
@@ -1089,6 +1118,7 @@
             </div>
             <div class="footer__contacts__block">
                 <span class="footer__contacts__title">Контакты</span>
+                <button type="button" class="footer__more">+</button>
                 <ul class="footer__contacts__list" itemscope itemtype="http://schema.org/BreadcrumbList">
                     <li class="footer__contacts__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <span itemprop="name" class="footer__contacts__info">8 495 150-31-71</span>
@@ -1112,6 +1142,10 @@
                         <meta itemprop="position" content="4" />
                     </li>
                 </ul>
+            </div>
+            <div class="footer__contacts__block footer__contacts__block_hide">
+                <span class="footer__contacts__title">Оборудование</span>
+                <button type="button" class="footer__more">+</button>
             </div>
         </div>
         <!-- /.container -->
